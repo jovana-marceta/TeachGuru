@@ -1,0 +1,358 @@
+:root {
+  --primary-color: #00ADEF;
+  --secondary-color: #2E3092;
+  --third-color: #46A346;
+  --dark-color: #282828;
+  --light-color:#E5E5E5;
+  --max-width: 1300px;
+}
+
+.category {
+  --it-color: #46A346;
+  --finance-color: #00ADEF;
+  --business-color: #B266B2;
+  --buy-color: red;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--dark-color);
+  font-family: 'Roboto', Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--light-color);
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  margin: .5rem 0;
+}
+img {
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fjalla One', cursive;
+  margin-bottom: .55rem;
+  line-height: 1.3;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+.category {
+  display: inline-block;
+  color: #fff;
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  padding: 0.4rem 0.6rem;
+  border-radius: 15px;
+  margin-bottom: 0.5rem;
+}
+
+/* Style categories color */
+.category-it {background: var(--it-color)}
+.category-finance {background: var(--finance-color)}
+.category-business {background: var(--business-color)}
+
+
+.l-heading {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.btn {
+  display: inline-block;
+  border: none;
+  background: var(--light-color);
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+}
+
+
+.btn-light {background: var(--light-color)}
+.btn-primary {background: var(--primary-color)}
+
+.btn-secondary {
+  background: var(--secondary-color);
+  color: #fff!important;
+}
+
+
+.btn-third {background: var(--third-color)}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.card {
+  background: #4c4c4c;
+  padding: 1rem;
+  border-bottom: 2.5px solid var(--primary-color);
+}
+
+.bg-light {
+  background: var(--light-color);
+  color: #000;
+}
+
+.bg-primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.bg-secondary {
+  background: var(--secondary-color);
+  color: #fff;
+}
+
+.bg-third {
+  background: var(--third-color);
+  color: #333;
+}
+.bg-light h1,
+.bg-light h2,
+.bg-light h3,
+.bg-light a,
+
+.bg-primary h1,
+.bg-primary h2,
+.bg-primary h3,
+.bg-primary a,
+
+.bg-secondary h1,
+.bg-secondary h2,
+.bg-secondary h3,
+.bg-secondary a {
+  color: #000;
+}
+
+.py-1 {padding: 1.6rem 0}
+.py-2 {padding: 2.2rem 0}
+.py-3 {padding: 3.2rem 0}
+.p-1 {padding: 1.6rem }
+.p-2 {padding: 2.2rem }
+.p-3 {padding: 3.2rem }
+
+
+.list li {
+  padding: .5rem 0;
+  border-bottom: #555 dotted 1px;
+  width: 90%;
+}
+
+.list li a:hover {
+  color: var(--primary-color)!important;
+}
+
+/* Inner page grid container for about and article */
+.page-container {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  margin: 2rem 0;
+  grid-gap: 1.5rem;
+}
+
+.page-container >*:first-child {
+  grid-row: 1 / span 3;
+}
+
+.page-container >*:last-child {
+  grid-row: 1 / span 3;
+}
+
+/* NAVBAR */
+#main-nav {
+  background: #333;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  border-bottom: 1.5px solid var(--primary-color);
+  opacity: 0.9;
+}
+
+#main-nav .container {
+  display: grid;
+  grid-template-columns: 6fr 3fr 2fr;
+  padding: 1rem;
+  align-items: center;
+}
+
+#main-nav .logo {
+  width: 200px;
+}
+
+#main-nav ul {
+  /* pust to end */
+  justify-self: end;
+  display: flex;
+}
+
+#main-nav ul li a {
+  padding: 0.75rem;
+  font-weight: bold;
+}
+
+#main-nav ul li a.current {
+  background: var(--primary-color);
+  color: var(--dark-color);
+}
+
+#main-nav ul li a:hover {
+  background: var(--dark-color);
+  color: var(--light-color);
+}
+
+#main-nav .social {
+  justify-self: center;
+}
+
+#main-nav .social i {
+  color: var(--primary-color);
+  margin-right: .3rem;
+}
+
+/* SHOWCASE */
+#showcase {
+  color: #fff;
+  background: #333;
+  padding: 2rem;
+  /* before selector is positioned absolute */
+  position: relative;
+}
+
+#showcase:before {
+  content: '';
+  background: url('../img/mobile-phone-1875813_1920.jpg') no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+#showcase .showcase-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+#showcase .showcase-content {
+  /* text on top of image */
+  z-index: 1;
+}
+
+#showcase .showcase-content p {
+  margin-bottom: 1rem;
+}
+
+#showcase .showcase-content h1 {
+  text-transform: uppercase;
+}
+
+
+/* HOME ARTICLES */
+#home-articles .articles-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
+/* any element, direct child */
+#home-articles .articles-container > *:first-child,
+#home-articles .articles-container > *:last-child {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  /* image in center */
+  align-items: center;
+  /* span across */
+  grid-column: 1 / span 2;
+}
+
+#home-articles .articles-container > *:last-child {
+  grid-column: 2 / span 2;;
+}
+
+#article .meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  padding: 0.5rem;
+}
+
+#article .meta .category {
+  margin-top: 0.4rem;
+}
+/* FOOTER */
+#main-footer {
+  background: var(--light-color);
+  color: var(--dark-color);
+}
+
+#main-footer img {
+  width: 190px;
+}
+
+#main-footer a {
+  color: #333;
+}
+
+#main-footer .footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.5rem;
+}
+
+#main-footer .footer-container > *:last-child {
+  background: #fff;
+  grid-column: 1 / span 4;
+  padding: .5rem;
+  text-align: center;
+  font-size: 0.80rem;
+}
+
+#main-footer .footer-container input[type='email'] {
+  width: 90%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#main-footer .footer-container input[type='submit'] {
+  width: 90%;
+}
+
+/* Article */
+.page-container >*:last-child {
+  grid-row: 1 / span 1;
+}
+
+
+.list li {
+  border-bottom: #f4f4f4 dotted 1px;
+}
